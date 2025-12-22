@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>Chidambaravignesh J | Java Technical Lead</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- React -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- React 18 -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-  <!-- Babel -->
+  <!-- Babel (must be after React) -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
+    tailwind.config = { darkMode: 'class' }
   </script>
 </head>
 
@@ -27,19 +25,53 @@
 <div id="root"></div>
 
 <script type="text/babel">
+document.addEventListener("DOMContentLoaded", () => {
+
+const { useState } = React;
+
+const Section = ({ id, title, children }) => (
+  <section id={id} className="max-w-7xl mx-auto px-6 py-20">
+    <h2 className="text-3xl font-bold mb-8">{title}</h2>
+    {children}
+  </section>
+);
+
+const Card = ({ title, children }) => (
+  <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow">
+    <h3 className="font-semibold mb-2">{title}</h3>
+    <p className="text-slate-600 dark:text-slate-400">{children}</p>
+  </div>
+);
+
+const Grid = ({ children }) => (
+  <div className="grid md:grid-cols-3 gap-6">{children}</div>
+);
+
+const Experience = ({ role, period, points }) => (
+  <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow mb-6">
+    <h3 className="font-semibold">{role}</h3>
+    <p className="text-sm text-slate-500 mb-3">{period}</p>
+    <ul className="list-disc ml-5 space-y-1">
+      {points.map((p, i) => <li key={i}>{p}</li>)}
+    </ul>
+  </div>
+);
 
 const App = () => {
+  const [dark, setDark] = useState(false);
+
   const toggleDark = () => {
     document.documentElement.classList.toggle("dark");
+    setDark(!dark);
   };
 
   return (
     <>
       {/* NAV */}
-      <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+      <nav className="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="font-bold text-lg">Vignesh</span>
-          <div className="space-x-5">
+          <span className="font-bold">Vignesh</span>
+          <div className="space-x-4">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
@@ -66,25 +98,29 @@ const App = () => {
           microservices, and enterprise platforms.
         </p>
         <div className="mt-8 space-x-4">
-          <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" target="_blank"
-             className="px-6 py-3 bg-blue-600 rounded text-white">
+          <a
+            href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf"
+            target="_blank"
+            className="px-6 py-3 bg-blue-600 rounded"
+          >
             Download Resume
           </a>
-          <a href="https://www.linkedin.com/in/cvigneshjavabackend" target="_blank"
-             className="px-6 py-3 border rounded">
+          <a
+            href="https://www.linkedin.com/in/cvigneshjavabackend"
+            target="_blank"
+            className="px-6 py-3 border rounded"
+          >
             LinkedIn
           </a>
         </div>
       </section>
 
-      {/* ABOUT */}
       <Section id="about" title="About">
         Java Technical Lead with expertise in Java 17, Spring Boot, REST APIs,
         microservices, and enterprise architecture across FinTech, Automotive,
         Healthcare, and Digital platforms.
       </Section>
 
-      {/* SKILLS */}
       <Section id="skills" title="Skills">
         <Grid>
           <Card title="Backend">Java 8/11/17, Spring Boot, REST, Microservices</Card>
@@ -94,7 +130,6 @@ const App = () => {
         </Grid>
       </Section>
 
-      {/* EXPERIENCE */}
       <Section id="experience" title="Experience">
         <Experience
           role="Lead Java Developer – Ernst & Young GDS"
@@ -123,17 +158,15 @@ const App = () => {
         />
       </Section>
 
-      {/* ARCHITECTURE */}
-      <Section id="architecture" title="Architecture Experience">
+      <Section id="architecture" title="Architecture">
         <Grid>
           <Card title="Microservices">Spring Boot, Kafka, Redis, Docker</Card>
-          <Card title="FinTech Systems">High-throughput payments & trading</Card>
+          <Card title="FinTech Systems">High-throughput payment & trading</Card>
           <Card title="Modernisation">Monolith to microservices</Card>
         </Grid>
       </Section>
 
-      {/* PROJECTS */}
-      <Section id="projects" title="Project Highlights">
+      <Section id="projects" title="Projects">
         <Grid>
           <Card title="Trading Platform">Enterprise financial systems</Card>
           <Card title="UPI Payments">Secure digital payment services</Card>
@@ -141,7 +174,6 @@ const App = () => {
         </Grid>
       </Section>
 
-      {/* CONTACT */}
       <Section id="contact" title="Contact">
         <form
           action="mailto:cvignesh.javabackend@gmail.com"
@@ -164,36 +196,9 @@ const App = () => {
   );
 };
 
-/* COMPONENTS */
-const Section = ({ id, title, children }) => (
-  <section id={id} className="max-w-7xl mx-auto px-6 py-20">
-    <h2 className="text-3xl font-bold mb-8">{title}</h2>
-    {children}
-  </section>
-);
-
-const Grid = ({ children }) => (
-  <div className="grid md:grid-cols-3 gap-6">{children}</div>
-);
-
-const Card = ({ title, children }) => (
-  <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow">
-    <h3 className="font-semibold mb-2">{title}</h3>
-    <p className="text-slate-600 dark:text-slate-400">{children}</p>
-  </div>
-);
-
-const Experience = ({ role, period, points }) => (
-  <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow mb-6">
-    <h3 className="font-semibold">{role}</h3>
-    <p className="text-sm text-slate-500 mb-3">{period}</p>
-    <ul className="list-disc ml-5">
-      {points.map(p => <li key={p}>{p}</li>)}
-    </ul>
-  </div>
-);
-
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+});
 </script>
 
 </body>
