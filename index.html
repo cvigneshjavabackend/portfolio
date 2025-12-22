@@ -5,202 +5,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chidambaravignesh J | Java Technical Lead</title>
 
-  <meta name="description" content="Java Technical Lead with 13+ years of experience in backend systems, microservices, and enterprise platforms." />
-  <meta name="keywords" content="Java Technical Lead, Java Architect, Spring Boot, Microservices, Backend Developer" />
+  <meta name="description" content="Java Technical Lead with 13+ years experience in backend, microservices, and enterprise platforms." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #020617;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f8fafc;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
       color: #1f2937;
       line-height: 1.6;
     }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0.8rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: #020617;
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+    }
+    .nav-btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+    }
+
+    /* Hero */
     header {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #ffffff;
-      padding: 3.5rem 1.5rem;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: #fff;
+      padding: 5rem 1.5rem;
       text-align: center;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.6rem;
-      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0.6rem;
     }
     header p {
-      margin: 0.5rem 0;
       color: #cbd5f5;
+      max-width: 800px;
+      margin: auto;
     }
-    header a {
-      color: #93c5fd;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      font-weight: 500;
-    }
-    .cta {
-      margin-top: 1.8rem;
+    .hero-actions {
+      margin-top: 2rem;
     }
     .btn {
       display: inline-block;
       padding: 0.9rem 1.8rem;
-      border-radius: 10px;
+      border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
       margin: 0.4rem;
-      transition: all 0.2s ease;
     }
     .btn-primary {
-      background: #2563eb;
-      color: #ffffff;
+      background: var(--primary);
+      color: #fff;
     }
-    .btn-primary:hover {
-      background: #1d4ed8;
-    }
-    .btn-secondary {
+    .btn-outline {
       border: 1px solid #93c5fd;
       color: #93c5fd;
     }
+
+    /* Sections */
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem;
     }
     h2 {
+      font-size: 1.9rem;
+      margin-bottom: 2rem;
       color: #020617;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.8rem;
-      font-size: 1.6rem;
     }
+
+    /* Cards */
     .card {
-      background: #ffffff;
-      padding: 1.6rem;
+      background: var(--card);
       border-radius: 14px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      padding: 1.6rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
       margin-bottom: 1.6rem;
     }
-    ul {
-      padding-left: 1.2rem;
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
+
+    ul { padding-left: 1.2rem; }
+
+    /* Footer */
     footer {
       background: #020617;
       color: #cbd5f5;
       text-align: center;
-      padding: 1.6rem;
+      padding: 2rem 1.5rem;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      header h1 { font-size: 2.2rem; }
+      nav a { margin-left: 0.6rem; }
     }
   </style>
 </head>
 <body>
 
+<!-- Navigation -->
+<nav>
+  <div class="nav-container">
+    <strong>Vignesh</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" class="nav-btn" target="_blank">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
 <header>
   <h1>Chidambaravignesh J</h1>
-  <p>Java Technical Lead | Backend Systems | Enterprise Platforms</p>
-  <p>Trivandrum, India | +91 9952196466 | cvignesh.javabackend@gmail.com</p>
-
   <p>
-    <a href="https://www.linkedin.com/in/cvigneshjavabackend" target="_blank">LinkedIn</a> |
-    <a href="https://cvigneshjavabackend.github.io/portfolio/" target="_blank">Portfolio</a>
+    Java Technical Lead with 13+ years of experience building scalable backend systems,
+    enterprise platforms, and microservices architectures across FinTech and enterprise domains.
   </p>
-
-  <div class="cta">
+  <div class="hero-actions">
     <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" class="btn btn-primary" target="_blank">
-      Download Resume (PDF)
+      Download Resume
     </a>
-    <a href="https://www.linkedin.com/in/cvigneshjavabackend" class="btn btn-secondary" target="_blank">
-      View LinkedIn
+    <a href="https://www.linkedin.com/in/cvigneshjavabackend" class="btn btn-outline" target="_blank">
+      LinkedIn
     </a>
   </div>
 </header>
 
-<section>
-  <h2>Profile</h2>
-  <p>
-    Java Technical Lead with 13+ years of experience designing and delivering scalable, secure, and
-    high-performance backend and enterprise platforms. Expert in Java 17, Spring Boot, REST APIs,
-    and microservices architecture. Proven leader in Agile delivery, system design, and mentoring
-    engineering teams across FinTech, Digital Home, Healthcare, and Automotive domains.
-  </p>
-</section>
-
-<section>
-  <h2>Key Skills</h2>
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
   <div class="card">
     <p>
-      <strong>Languages:</strong> Java 8 / 11 / 17, C, C++<br />
-      <strong>Backend:</strong> Spring Boot, REST APIs, Hibernate, JPA, Microservices<br />
-      <strong>Messaging & Performance:</strong> Kafka, Redis, Multithreading<br />
-      <strong>Databases:</strong> MySQL, MongoDB, Sybase<br />
-      <strong>DevOps:</strong> Docker, CI/CD, Jenkins, GitHub Actions<br />
-      <strong>Practices:</strong> Agile / SAFe, SOLID, Design Patterns
+      Java Technical Lead with expertise in Java 17, Spring Boot, REST APIs, and microservices.
+      Proven leader in Agile delivery, architecture design, and mentoring teams. Strong background
+      across FinTech, Healthcare, Automotive, and Digital Home domains.
     </p>
   </div>
 </section>
 
-<section>
-  <h2>Professional Experience</h2>
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="card">
+      <strong>Backend</strong>
+      <p>Java 8/11/17, Spring Boot, Microservices, REST APIs</p>
+    </div>
+    <div class="card">
+      <strong>Data & Messaging</strong>
+      <p>MySQL, MongoDB, Sybase, Kafka, Redis</p>
+    </div>
+    <div class="card">
+      <strong>DevOps</strong>
+      <p>Docker, Jenkins, CI/CD, GitHub Actions</p>
+    </div>
+    <div class="card">
+      <strong>Practices</strong>
+      <p>Agile / SAFe, SOLID, Design Patterns, Mentoring</p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <h2>Experience</h2>
 
   <div class="card">
-    <h3>Lead Java Developer – Ernst & Young GDS (Mar 2024 – Present)</h3>
+    <h3>Lead Java Developer – Ernst & Young GDS</h3>
+    <p><em>Mar 2024 – Present</em></p>
     <ul>
-      <li>Leading architecture and development of enterprise trading and financial platforms.</li>
+      <li>Leading architecture and backend development for enterprise financial platforms.</li>
       <li>Designing scalable microservices using Java 17 and Spring Boot.</li>
-      <li>Optimising system performance using concurrency, caching, and JVM tuning.</li>
-      <li>Collaborating with clients, architects, and product owners.</li>
-      <li>Mentoring engineers and driving Agile best practices.</li>
+      <li>Driving performance optimisation, code quality, and Agile delivery.</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>Lead Engineer – GAVS Technology (Jan 2023 – Mar 2024)</h3>
+    <h3>Lead Engineer – GAVS Technology</h3>
+    <p><em>Jan 2023 – Mar 2024</em></p>
     <ul>
-      <li>Led UPI and digital payment platform development for FinTech clients.</li>
-      <li>Built Spring Boot microservices and Flutter-based applications.</li>
+      <li>Led UPI and digital payment platform development.</li>
       <li>Implemented Kafka messaging and Redis caching.</li>
-      <li>Provided technical leadership and delivery governance.</li>
     </ul>
   </div>
 
   <div class="card">
-    <h3>Assistant Manager – Renault Nissan Technology (Mar 2019 – Jan 2023)</h3>
+    <h3>Assistant Manager – Renault Nissan Technology</h3>
+    <p><em>Mar 2019 – Jan 2023</em></p>
     <ul>
-      <li>Product Owner and Lead Java Developer for internal enterprise platforms.</li>
-      <li>Owned system architecture, backlog prioritisation, and stakeholder alignment.</li>
-      <li>Delivered Java-based enterprise applications and REST APIs.</li>
-      <li>Led Agile ceremonies and cross-team releases.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Senior Engineer – Continental Automotive (Jul 2018 – Jan 2019)</h3>
-    <ul>
-      <li>Developed ADAS radar-based road estimation algorithms.</li>
-      <li>Worked with Embedded C/C++, MATLAB, and Python.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Senior Engineer – Jasmin Infotech (Nov 2012 – Jun 2018)</h3>
-    <ul>
-      <li>Developed Digital Home and Healthcare signal-processing solutions.</li>
-      <li>Built Java dashboards and Android applications.</li>
-      <li>Worked on ARM Cortex–based embedded and real-time systems.</li>
+      <li>Product Owner and Lead Java Developer for enterprise platforms.</li>
+      <li>Owned architecture, backlog prioritisation, and releases.</li>
     </ul>
   </div>
 </section>
 
-<section>
+<!-- Education -->
+<section id="education">
   <h2>Education</h2>
   <div class="card">
-    <p><strong>Bachelor of Engineering (ECE)</strong> – PET Engineering College (GPA: 8.01)</p>
-    <p><strong>Diploma in Electronics & Communication</strong> – IRT Polytechnic College (94.5%)</p>
+    <p><strong>B.E. Electronics & Communication</strong> – PET Engineering College</p>
+    <p><strong>Diploma – ECE</strong> – IRT Polytechnic College</p>
   </div>
 </section>
 
 <footer>
-  © 2025 Chidambaravignesh J | Java Technical Lead
+  © 2025 Chidambaravignesh J · Java Technical Lead
 </footer>
 
 </body>
 </html>
-
