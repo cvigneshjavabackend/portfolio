@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chidambaravignesh J | Java Technical Lead</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Java Technical Lead with 13+ years experience in backend, microservices, and enterprise systems." />
+  <meta name="description" content="Java Technical Lead with 13+ years of experience in backend systems, microservices, and enterprise platforms." />
 
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -70,6 +67,10 @@
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
     }
+    .toggle {
+      cursor: pointer;
+      margin-left: 1rem;
+    }
 
     /* HERO */
     header {
@@ -78,8 +79,15 @@
       padding: 5rem 1.5rem;
       text-align: center;
     }
-    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    header p { color: #cbd5f5; max-width: 900px; margin: auto; }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.6rem;
+    }
+    header p {
+      color: #cbd5f5;
+      max-width: 900px;
+      margin: auto;
+    }
 
     .btn {
       display: inline-block;
@@ -98,7 +106,10 @@
       padding: 4rem 1.5rem;
     }
 
-    h2 { font-size: 1.9rem; margin-bottom: 2rem; }
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 2rem;
+    }
 
     .grid {
       display: grid;
@@ -113,18 +124,13 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
+    ul { padding-left: 1.2rem; }
+
     footer {
       background: #020617;
       color: #cbd5f5;
       text-align: center;
       padding: 2rem;
-    }
-
-    /* Dark mode toggle */
-    .toggle {
-      cursor: pointer;
-      font-size: 0.9rem;
-      margin-left: 1rem;
     }
 
     input, textarea {
@@ -153,8 +159,12 @@
   <div class="nav-container">
     <strong>Vignesh</strong>
     <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
       <a href="#architecture">Architecture</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
       <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" class="nav-btn" target="_blank">Resume</a>
       <span class="toggle" onclick="toggleDark()">🌙</span>
@@ -169,56 +179,104 @@
   <a href="https://www.linkedin.com/in/cvigneshjavabackend" class="btn btn-outline" target="_blank">LinkedIn</a>
 </header>
 
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      Java Technical Lead with 13+ years of experience designing and delivering scalable backend
+      and enterprise platforms. Expert in Java 17, Spring Boot, REST APIs, and microservices.
+      Proven leader in Agile delivery, architecture design, and mentoring teams across FinTech,
+      Healthcare, Automotive, and Digital domains.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><strong>Backend</strong><p>Java 8/11/17, Spring Boot, REST, Microservices</p></div>
+    <div class="card"><strong>Data</strong><p>MySQL, MongoDB, Sybase, Redis</p></div>
+    <div class="card"><strong>Messaging</strong><p>Kafka, Async Processing</p></div>
+    <div class="card"><strong>DevOps</strong><p>Docker, CI/CD, Jenkins, GitHub</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+
+  <div class="card">
+    <h3>Lead Java Developer – Ernst & Young GDS (2024–Present)</h3>
+    <ul>
+      <li>Leading architecture and development of enterprise trading platforms.</li>
+      <li>Designing scalable Java 17 microservices.</li>
+      <li>Mentoring teams and driving Agile delivery.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Lead Engineer – GAVS Technology (2023–2024)</h3>
+    <ul>
+      <li>Led UPI and digital payments platforms.</li>
+      <li>Kafka-based async systems and caching.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Assistant Manager – Renault Nissan (2019–2023)</h3>
+    <ul>
+      <li>Product Owner and Lead Java Developer.</li>
+      <li>Enterprise system architecture and releases.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Senior Engineer – Continental Automotive</h3>
+    <ul>
+      <li>ADAS radar and embedded systems.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Senior Engineer – Jasmin Infotech</h3>
+    <ul>
+      <li>Digital Home and Healthcare platforms.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="architecture">
   <h2>Architecture Experience</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Microservices Platform</h3>
-      <p>Spring Boot, REST APIs, Kafka, Redis, Docker, CI/CD. Designed scalable, fault-tolerant systems.</p>
-    </div>
-    <div class="card">
-      <h3>FinTech Payments Architecture</h3>
-      <p>UPI integrations, asynchronous processing, secure API gateways, high-availability systems.</p>
-    </div>
-    <div class="card">
-      <h3>Enterprise Modernisation</h3>
-      <p>Monolith-to-microservices migration, performance tuning, observability, cloud readiness.</p>
-    </div>
+    <div class="card"><h3>Microservices</h3><p>Spring Boot, Kafka, Redis, Docker</p></div>
+    <div class="card"><h3>FinTech</h3><p>High-throughput payment & trading systems</p></div>
+    <div class="card"><h3>Modernisation</h3><p>Monolith to microservices migrations</p></div>
   </div>
 </section>
 
 <section id="projects">
   <h2>Project Highlights</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Trading & Financial Platform</h3>
-      <p>Led backend architecture and performance optimisation for enterprise trading systems.</p>
-    </div>
-    <div class="card">
-      <h3>UPI Digital Payments</h3>
-      <p>Designed secure, high-throughput payment services using Kafka and Spring Boot.</p>
-    </div>
-    <div class="card">
-      <h3>Enterprise Digital Platform</h3>
-      <p>Product owner and lead engineer delivering scalable internal enterprise applications.</p>
-    </div>
+    <div class="card"><h3>Trading Platform</h3><p>Enterprise financial systems</p></div>
+    <div class="card"><h3>UPI Payments</h3><p>Secure digital payment services</p></div>
+    <div class="card"><h3>Enterprise Platform</h3><p>Internal business applications</p></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <p><strong>B.E. (ECE)</strong> – PET Engineering College</p>
+    <p><strong>Diploma (ECE)</strong> – IRT Polytechnic College</p>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <!-- Replace action with Formspree URL if needed -->
     <form action="mailto:cvignesh.javabackend@gmail.com" method="post" enctype="text/plain">
-      <label>Name</label>
-      <input type="text" name="name" required>
-
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Message</label>
-      <textarea name="message" rows="5" required></textarea>
-
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>
