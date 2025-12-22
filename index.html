@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chidambaravignesh J | Java Technical Lead</title>
 
-  <meta name="description" content="Java Technical Lead with 13+ years experience in backend, microservices, and enterprise platforms." />
+  <!-- SEO -->
+  <meta name="description" content="Java Technical Lead with 13+ years experience in backend, microservices, and enterprise systems." />
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,249 +15,229 @@
 
   <style>
     :root {
-      --primary: #2563eb;
-      --dark: #020617;
-      --muted: #64748b;
       --bg: #f8fafc;
       --card: #ffffff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --dark: #020617;
+    }
+
+    body.dark {
+      --bg: #020617;
+      --card: #0f172a;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --primary: #60a5fa;
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: var(--bg);
-      color: #1f2937;
+      color: var(--text);
       line-height: 1.6;
     }
 
-    /* Navigation */
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
+      background: var(--card);
       border-bottom: 1px solid #e5e7eb;
     }
     .nav-container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 0.8rem 1.2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
     nav a {
-      color: #020617;
+      margin-left: 1rem;
       text-decoration: none;
-      margin-left: 1.2rem;
+      color: var(--text);
       font-weight: 500;
     }
     .nav-btn {
       background: var(--primary);
       color: #fff;
-      padding: 0.45rem 0.9rem;
+      padding: 0.4rem 0.8rem;
       border-radius: 6px;
     }
 
-    /* Hero */
+    /* HERO */
     header {
       background: linear-gradient(135deg, #020617, #0f172a);
       color: #fff;
       padding: 5rem 1.5rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.6rem;
-    }
-    header p {
-      color: #cbd5f5;
-      max-width: 800px;
-      margin: auto;
-    }
-    .hero-actions {
-      margin-top: 2rem;
-    }
+    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    header p { color: #cbd5f5; max-width: 900px; margin: auto; }
+
     .btn {
       display: inline-block;
-      padding: 0.9rem 1.8rem;
+      padding: 0.9rem 1.6rem;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
       margin: 0.4rem;
     }
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-    }
-    .btn-outline {
-      border: 1px solid #93c5fd;
-      color: #93c5fd;
-    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-outline { border: 1px solid #93c5fd; color: #93c5fd; }
 
-    /* Sections */
     section {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 4rem 1.5rem;
     }
-    h2 {
-      font-size: 1.9rem;
-      margin-bottom: 2rem;
-      color: #020617;
-    }
 
-    /* Cards */
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      padding: 1.6rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      margin-bottom: 1.6rem;
-    }
+    h2 { font-size: 1.9rem; margin-bottom: 2rem; }
 
-    /* Skills grid */
-    .skills-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
-    ul { padding-left: 1.2rem; }
+    .card {
+      background: var(--card);
+      padding: 1.6rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
 
-    /* Footer */
     footer {
       background: #020617;
       color: #cbd5f5;
       text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.9rem;
+      padding: 2rem;
     }
 
-    @media (max-width: 640px) {
-      header h1 { font-size: 2.2rem; }
-      nav a { margin-left: 0.6rem; }
+    /* Dark mode toggle */
+    .toggle {
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #cbd5f5;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 1.4rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
 <nav>
   <div class="nav-container">
     <strong>Vignesh</strong>
     <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
       <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" class="nav-btn" target="_blank">Resume</a>
+      <span class="toggle" onclick="toggleDark()">🌙</span>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
 <header>
   <h1>Chidambaravignesh J</h1>
-  <p>
-    Java Technical Lead with 13+ years of experience building scalable backend systems,
-    enterprise platforms, and microservices architectures across FinTech and enterprise domains.
-  </p>
-  <div class="hero-actions">
-    <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" class="btn btn-primary" target="_blank">
-      Download Resume
-    </a>
-    <a href="https://www.linkedin.com/in/cvigneshjavabackend" class="btn btn-outline" target="_blank">
-      LinkedIn
-    </a>
-  </div>
+  <p>Java Technical Lead & Architect — Backend Systems, Microservices, Enterprise Platforms</p>
+  <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" class="btn btn-primary" target="_blank">Download Resume</a>
+  <a href="https://www.linkedin.com/in/cvigneshjavabackend" class="btn btn-outline" target="_blank">LinkedIn</a>
 </header>
 
-<!-- About -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      Java Technical Lead with expertise in Java 17, Spring Boot, REST APIs, and microservices.
-      Proven leader in Agile delivery, architecture design, and mentoring teams. Strong background
-      across FinTech, Healthcare, Automotive, and Digital Home domains.
-    </p>
-  </div>
-</section>
-
-<!-- Skills -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
+<section id="architecture">
+  <h2>Architecture Experience</h2>
+  <div class="grid">
     <div class="card">
-      <strong>Backend</strong>
-      <p>Java 8/11/17, Spring Boot, Microservices, REST APIs</p>
+      <h3>Microservices Platform</h3>
+      <p>Spring Boot, REST APIs, Kafka, Redis, Docker, CI/CD. Designed scalable, fault-tolerant systems.</p>
     </div>
     <div class="card">
-      <strong>Data & Messaging</strong>
-      <p>MySQL, MongoDB, Sybase, Kafka, Redis</p>
+      <h3>FinTech Payments Architecture</h3>
+      <p>UPI integrations, asynchronous processing, secure API gateways, high-availability systems.</p>
     </div>
     <div class="card">
-      <strong>DevOps</strong>
-      <p>Docker, Jenkins, CI/CD, GitHub Actions</p>
-    </div>
-    <div class="card">
-      <strong>Practices</strong>
-      <p>Agile / SAFe, SOLID, Design Patterns, Mentoring</p>
+      <h3>Enterprise Modernisation</h3>
+      <p>Monolith-to-microservices migration, performance tuning, observability, cloud readiness.</p>
     </div>
   </div>
 </section>
 
-<!-- Experience -->
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="card">
-    <h3>Lead Java Developer – Ernst & Young GDS</h3>
-    <p><em>Mar 2024 – Present</em></p>
-    <ul>
-      <li>Leading architecture and backend development for enterprise financial platforms.</li>
-      <li>Designing scalable microservices using Java 17 and Spring Boot.</li>
-      <li>Driving performance optimisation, code quality, and Agile delivery.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Lead Engineer – GAVS Technology</h3>
-    <p><em>Jan 2023 – Mar 2024</em></p>
-    <ul>
-      <li>Led UPI and digital payment platform development.</li>
-      <li>Implemented Kafka messaging and Redis caching.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Assistant Manager – Renault Nissan Technology</h3>
-    <p><em>Mar 2019 – Jan 2023</em></p>
-    <ul>
-      <li>Product Owner and Lead Java Developer for enterprise platforms.</li>
-      <li>Owned architecture, backlog prioritisation, and releases.</li>
-    </ul>
+<section id="projects">
+  <h2>Project Highlights</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Trading & Financial Platform</h3>
+      <p>Led backend architecture and performance optimisation for enterprise trading systems.</p>
+    </div>
+    <div class="card">
+      <h3>UPI Digital Payments</h3>
+      <p>Designed secure, high-throughput payment services using Kafka and Spring Boot.</p>
+    </div>
+    <div class="card">
+      <h3>Enterprise Digital Platform</h3>
+      <p>Product owner and lead engineer delivering scalable internal enterprise applications.</p>
+    </div>
   </div>
 </section>
 
-<!-- Education -->
-<section id="education">
-  <h2>Education</h2>
+<section id="contact">
+  <h2>Contact</h2>
   <div class="card">
-    <p><strong>B.E. Electronics & Communication</strong> – PET Engineering College</p>
-    <p><strong>Diploma – ECE</strong> – IRT Polytechnic College</p>
+    <!-- Replace action with Formspree URL if needed -->
+    <form action="mailto:cvignesh.javabackend@gmail.com" method="post" enctype="text/plain">
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </section>
 
 <footer>
   © 2025 Chidambaravignesh J · Java Technical Lead
 </footer>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme',
+      document.body.classList.contains('dark') ? 'dark' : 'light');
+  }
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+  }
+</script>
 
 </body>
 </html>
