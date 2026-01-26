@@ -1,139 +1,359 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <title>Chidambaravignesh J | Java Technical Lead</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { darkMode: 'class' }
-  </script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chidambaravignesh J | Java Technical Lead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        premium: { 50: '#f8fafc', 100: '#f1f5f9', 600: '#2563eb', 800: '#1e293b', 900: '#0f172a' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .bento-card {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .simple-checkmark-list {
+            list-style-type: '✓ ';
+            font-size: large;
+            color: green;
+            /* Add a space after the character for separation */
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200">
+<body class="bg-white text-slate-900 dark:bg-premium-900 dark:text-slate-100 transition-colors">
 
-<!-- NAV -->
-<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <span class="font-bold text-lg">Vignesh</span>
-    <div class="space-x-4">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf"
-         class="px-4 py-2 bg-blue-600 text-white rounded"
-         target="_blank">Resume</a>
-      <button onclick="toggleDark()">🌙</button>
-    </div>
-  </div>
-</nav>
+    <!-- NAVIGATION -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/70 dark:bg-premium-900/70 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-8 py-5 flex justify-between items-center">
+            <span class="font-extrabold text-xl tracking-tight uppercase">Chidambaravignesh</span>
+            <div
+                class="hidden md:flex items-center gap-10 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                <a href="#about" class="hover:text-blue-600 transition">Strategy</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Career</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Stack</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+            <button onclick="toggleDark()"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800">🌓</button>
+        </div>
+    </nav>
 
-<!-- HERO -->
-<header class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-24 text-center">
-  <h1 class="text-4xl font-bold">Chidambaravignesh J</h1>
-  <p class="mt-4 max-w-3xl mx-auto text-slate-300">
-    Java Technical Lead & Architect with 13+ years of experience building scalable backend,
-    microservices, and enterprise platforms.
-  </p>
-  <div class="mt-8 space-x-4">
-    <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf"
-       class="px-6 py-3 bg-blue-600 rounded"
-       target="_blank">Download Resume</a>
-    <a href="https://www.linkedin.com/in/cvigneshjavabackend"
-       class="px-6 py-3 border rounded"
-       target="_blank">LinkedIn</a>
-  </div>
-</header>
+    <!-- HERO: ASYMMETRIC LOOK -->
+    <section id="about" class="pt-40 pb-20 px-8 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-end">
+            <div class="lg:col-span-8">
+                <h1 style="font-size: xx-large;"
+                    class="text-7xl md:text-9xl font-extrabold leading-[0.9] tracking-tighter mb-9">
+                    Java Technical Lead <br /> <br /> <span style="font-size: medium;"
+                        class="inline-block px-3 py-1 mb-6 text-xl font-bold bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded uppercase tracking-tighter">
+                        Looking for opportunities in Trivandrum/Coimbatore/Chennai/Remote</span>
+                    <ul class="simple-checkmark-list">
+                        <li>
+                            <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-2xl leading-relaxed">
+                                13+ years of engineering resilience into <span
+                                    class="text-slate-900 dark:text-white font-semibold">FinTech, Automotive, and
+                                    Digital Ecosystems</span> through Java 17, Springboot and distributed Microservices.
+                            </p>
+                        </li>
+                        <br />
+                        <li>
+                            <p style="font-size: larger;" class="text-slate-700 dark:text-white font-semibold">
+                                Proven leadership in <span class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-2xl leading-relaxed"> delivery, mentoring teams, and stakeholder collaboration </span>
+                            </p>
+                        </li>
+                    </ul>
 
-<!-- ABOUT -->
-<section id="about" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-6">About</h2>
-  <p>
-    Java Technical Lead with deep expertise in Java 17, Spring Boot, REST APIs, and microservices.
-    Proven leader across FinTech, Automotive, Healthcare, and Digital platforms.
-  </p>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-8">Skills</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">Java 8/11/17, Spring Boot</div>
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">Kafka, Redis, Microservices</div>
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">Docker, CI/CD, Jenkins</div>
-  </div>
-</section>
+            </div>
+            <div class="lg:col-span-4 flex flex-col gap-4">
+                <a href="https://www.linkedin.com/in/cvigneshjavabackend/" target="_blank"
+                    class="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl bento-card flex justify-between items-center group">
+                    <span class="font-bold">LinkedIn Profile</span>
+                    <i class="fab fa-linkedin text-2xl group-hover:text-blue-600"></i>
+                </a>
+                <a href="Chidambaravignesh_JavaLead_UK_EU_Standard.pdf" target="_blank"
+                    class="p-6 bg-blue-600 text-white rounded-2xl bento-card flex justify-between items-center shadow-lg shadow-blue-600/20">
+                    <span class="font-bold">Download Resume</span>
+                    <i class="fas fa-file-pdf text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-8">Experience</h2>
+    <!-- TECH STACK: BENTO GRID -->
+    <section id="skills" class="py-20 px-8 max-w-6xl mx-auto">
+        <h2 class="text-lg font-bold uppercase tracking-[0.3em] text-blue-600 mb-10">Technical Core</h2>
+        <div class="grid md:grid-cols-4 grid-rows-2 gap-4">
+            <div class="md:col-span-3 p-8 dark:bg-slate-800/40 bg-yellow-100 rounded-3xl bento-card">
+                <h3 class="text-2xl font-bold mb-4">Backend Mastery</h3>
+                <p class="text-slate-500 dark:text-slate-600 text-sm mb-6">High-performance systems using modern Java
+                    paradigms.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">JAVA 17</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">MULTITHREADING</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">SPRING BOOT
+                        3</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">HIBERNATE/JPA</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">REST API</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">JUNIT</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">JSON</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">POSTMAN</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">SWAGGER</span>
+                </div>
+                
+            </div>
+            <div class="p-8 bg-slate-700 text-white rounded-3xl bento-card flex flex-col justify-between">
+                <i class="fas fa-project-diagram text-3xl text-blue-500"></i>
+                <h3 class="font-bold text-lg leading-tight">Databases</h3>
+                <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">MySQL</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Sybase</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Firebase</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">MongoDB</span>
+                </div>
+            </div>
+            <div class="p-8 bg-slate-700 text-white rounded-3xl bento-card flex flex-col justify-between">
+                <i class="fas fa-project-diagram text-3xl text-blue-500"></i>
+                <h3 class="font-bold text-lg leading-tight">Distributed Systems</h3>
+                <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Spring Cloud</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Config Server</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Docker</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Promotheus/Grafana</span>
+                </div>
+            </div>
+            <div class="p-8 bg-blue-500 text-white rounded-3xl bento-card flex flex-col justify-between">
+                <i class="fas fa-shield-alt text-3xl"></i>
+                <h3 class="font-bold text-lg leading-tight">FinTech Security</h3>
+                 <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Spring Security</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">JWT</span>
+                </div>
 
-  <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow mb-6">
-    <h3 class="font-semibold">Lead Java Developer – Ernst & Young GDS</h3>
-    <p class="text-sm text-slate-500">2024 – Present</p>
-    <ul class="list-disc ml-5 mt-3">
-      <li>Leading enterprise trading platforms</li>
-      <li>Java 17 microservices architecture</li>
-      <li>Mentoring teams and Agile delivery</li>
-    </ul>
-  </div>
+            </div>
+            <div class="p-8 bg-red-100 dark:bg-slate-800/40 rounded-3xl bento-card flex flex-col justify-between">
+                <i class="fab fa-docker text-3xl text-slate-400"></i>
+                <h3 class="font-bold text-lg leading-tight">DevOps & Cloud</h3>
+                <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Github</span>
+                    <span class="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded-full">Azure/GCP</span>
+                </div>
+            </div>
+            <div
+                class="md:col-span-1 p-8 bg-slate-200 dark:bg-slate-800/40 rounded-xl bento-card flex items-center justify-center">
+                <div>
+                    <h3 class="text-xl font-bold">Kafka & Redis</h3>
+                    <p class="text-slate-500 text-sm">Low-latency event streaming and caching.</p>
+                </div>
+                <div class="flex -space-x-3">
+                    <div
+                        class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-slate-900 font-bold">
+                        K</div>
+                    <div
+                        class="w-12 h-12 rounded-full bg-white border-2 border-slate-200 flex items-center justify-center text-red-600 font-bold">
+                        R</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow mb-6">
-    <h3 class="font-semibold">Lead Engineer – GAVS Technology</h3>
-    <p class="text-sm text-slate-500">2023 – 2024</p>
-    <ul class="list-disc ml-5 mt-3">
-      <li>UPI digital payments platforms</li>
-      <li>Kafka async systems</li>
-    </ul>
-  </div>
-</section>
+    <!-- EXPERIENCE: CLEAN TIMELINE -->
+    <section id="experience" class="py-20 px-8 max-w-6xl mx-auto">
+        <h2 class="text-lg font-bold uppercase tracking-[0.3em] text-blue-600 mb-10">EXPERIENCE</h2>
+        <div class="space-y-24">
+            <div class="grid md:grid-cols-4 gap-8 group">
+                <div class="md:col-span-1">
+                    <span class="text-sm font-bold text-slate-400 group-hover:text-blue-600 transition">2024 —
+                        PRESENT</span>
+                </div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold mb-1">Lead Java Developer</h3>
+                    <p class="text-blue-600 font-semibold mb-4 italic text-sm">Ernst & Young GDS</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">Architecting the future of
+                        enterprise trading. Spearheading the shift to Java 17 microservices while mentoring global
+                        engineering teams in Agile excellence.</p>
+                    <div class="flex gap-4">
+                        <span class="text-xs font-bold text-slate-400">#Java8</span>
+                        <span class="text-xs font-bold text-slate-400">#Springboot</span>
+                        <span class="text-xs font-bold text-slate-400">#Hibernate</span>
+                        <span class="text-xs font-bold text-slate-400">#SyBase</span>
+                        <span class="text-xs font-bold text-slate-400">#Microservices</span>
+                        <span class="text-xs font-bold text-slate-400">#Azure DevOps</span>
+                        <span class="text-xs font-bold text-slate-400">#TradingSystems</span>
+                    </div>
+                </div>
+            </div>
 
-<!-- ARCHITECTURE -->
-<section id="architecture" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-8">Architecture</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">Microservices Architecture</div>
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">FinTech Payments Systems</div>
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">System Modernisation</div>
-  </div>
-</section>
+            <div class="grid md:grid-cols-4 gap-8 group opacity-70 hover:opacity-100 transition">
+                <div class="md:col-span-1 text-sm font-bold text-slate-400">Jan 2023 — Mar 2024</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold mb-1">Lead Engineer</h3>
+                    <p class="text-blue-600 font-semibold mb-4 italic text-sm">GAVS Technology</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Engineered UPI Digital and bill Payments
+                        platform with high-concurrency Kafka integration for real-time financial settlements.</p>
+                        <br/>
+                        <div class="flex gap-4">
+                        <span class="text-xs font-bold text-slate-400">#Java17</span>
+                        <span class="text-xs font-bold text-slate-400">#Springboot</span>
+                        <span class="text-xs font-bold text-slate-400">#Firebase</span>
+                        <span class="text-xs font-bold text-slate-400">#MySQL</span>
+                        <span class="text-xs font-bold text-slate-400">#REST API</span>
+                        <span class="text-xs font-bold text-slate-400">#Microservices</span>
+                        <span class="text-xs font-bold text-slate-400">#Flutter</span>
+                        <span class="text-xs font-bold text-slate-400">#Spring Security</span>
+                        <span class="text-xs font-bold text-slate-400">#JWT</span>
+                        <span class="text-xs font-bold text-slate-400">#PaymentsApp</span>
+                </div>
+                    </div>
+                
+            </div>
 
-<!-- PROJECTS -->
-<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-8">Projects</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">Trading Platform</div>
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">UPI Payments</div>
-    <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow">Enterprise Platform</div>
-  </div>
-</section>
+            <div class="grid md:grid-cols-4 gap-8 group opacity-70 hover:opacity-100 transition">
+                <div class="md:col-span-1 text-sm font-bold text-slate-400">Mar 2019 — Jan 2023</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold mb-1">Assistant Manager</h3>
+                    <p class="text-blue-600 font-semibold mb-4 italic text-sm">Renault Nissan Technology Business Centre India</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Product Ownership, system architecture, backlog prioritization, stakeholder communication
+                        , Conducting Agile ceremonies and coordinated releases across teams and delivered enterprise application for magic draw tool</p>
+                <br/>
+                <div class="flex gap-4">
+                        <span class="text-xs font-bold text-slate-400">#Java8</span>
+                        <span class="text-xs font-bold text-slate-400">#Springboot</span>
+                        <span class="text-xs font-bold text-slate-400">#MySQL</span>
+                        <span class="text-xs font-bold text-slate-400">#REST API</span>
+                        <span class="text-xs font-bold text-slate-400">#Microservices</span>
+                        <span class="text-xs font-bold text-slate-400">#HTML</span>
+                        <span class="text-xs font-bold text-slate-400">#Thymeleaf</span>
+                        <span class="text-xs font-bold text-slate-400">#UML/SysML</span>
+                        <span class="text-xs font-bold text-slate-400">#Magicdraw</span>
+                </div>
+                    </div>
+                
+            </div>
 
-<!-- CONTACT -->
-<section id="contact" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-bold mb-8">Contact</h2>
-  <form action="mailto:cvignesh.javabackend@gmail.com" method="post"
-        class="max-w-xl space-y-4">
-    <input class="w-full p-3 border rounded" placeholder="Name" />
-    <input class="w-full p-3 border rounded" placeholder="Email" />
-    <textarea class="w-full p-3 border rounded" rows="4" placeholder="Message"></textarea>
-    <button class="px-6 py-3 bg-blue-600 text-white rounded">Send Message</button>
-  </form>
-</section>
+            <div class="grid md:grid-cols-4 gap-8 group opacity-70 hover:opacity-100 transition">
+                <div class="md:col-span-1 text-sm font-bold text-slate-400">Jul 2018 — Jan 2019</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold mb-1">Senior Engineer</h3>
+                    <p class="text-blue-600 font-semibold mb-4 italic text-sm">Continental Automotive India</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Development of radar based road and lane track estimation algorithms in ADAS</p>
+                    <br/>
+                    <div class="flex gap-4">
+                        <span class="text-xs font-bold text-slate-400">#C/C++</span>
+                        <span class="text-xs font-bold text-slate-400">#Python</span>
+                        <span class="text-xs font-bold text-slate-400">#Matlab</span>
+                        <span class="text-xs font-bold text-slate-400">#Digital Signal Processing</span>
+                        <span class="text-xs font-bold text-slate-400">#RADAR</span>
+                        <span class="text-xs font-bold text-slate-400">#ADAS</span>
+                        <span class="text-xs font-bold text-slate-400">#PlantUML</span>
+                </div>
+                </div>
+                
+            </div>
 
-<footer class="text-center py-10 text-slate-500">
-  © 2025 Chidambaravignesh J · Java Technical Lead
-</footer>
+            <div class="grid md:grid-cols-4 gap-8 group opacity-70 hover:opacity-100 transition">
+                <div class="md:col-span-1 text-sm font-bold text-slate-400">Nov 2012 — Jun 2018</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold mb-1">Senior Systems Engineer</h3>
+                    <p class="text-blue-600 font-semibold mb-4 italic text-sm">Jasmin Infotech India</p>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Development of healthcare applications, algortihms, java based dashboards for android application, embedded system integration</p>
+                    <br/>
+                    <div class="flex gap-4">
+                        <span class="text-xs font-bold text-slate-400">#Core Java</span>
+                        <span class="text-xs font-bold text-slate-400">#C/C++</span>
+                        <span class="text-xs font-bold text-slate-400">#Matlab</span>
+                        <span class="text-xs font-bold text-slate-400">#Digital Signal Processing</span>
+                        <span class="text-xs font-bold text-slate-400">#HTML</span>
+                        <span class="text-xs font-bold text-slate-400">#Javascript</span>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-<script>
-  function toggleDark() {
-    document.documentElement.classList.toggle('dark');
-  }
-</script>
+    <section id="skills" class="py-20 px-8 max-w-6xl mx-auto">
+        <h2 class="text-lg font-bold uppercase tracking-[0.3em] text-blue-600 mb-10">Projects</h2>
+        <div class="grid md:grid-cols-4 grid-rows-2 gap-4">
+            <div class="md:col-span-2 p-8 dark:bg-slate-800/40 bg-blue-200 rounded-3xl bento-card">
+                <h3 class="font-size mb-10 font-bold mb-4">Corporate Projects</h3>
+                <p class="text-blue-600 font-bold mb-4 italic text-sm">Trade Analytics Posting Server
+                    <span class="text-xs font-bold text-slate-600">(Company:- Ernst and Young GDS)</span>
+                </p>
+                        <ul class="simple-checkmark-list">
+                            <li><p style="font-size:medium ;" class="text-slate-600 dark:text-slate-400 leading-relaxed">New Java backend server development for real time trade analytics calculation of each trades posted and the asset security changes.</p></li>
+                            <li><p style="font-size:medium ;" class="text-slate-600 dark:text-slate-400 leading-relaxed">Implemented event listeners for trades and security changes.</p></li>
+                            <li><p style="font-size:medium ;" class="text-slate-600 dark:text-slate-400 leading-relaxed">Implemented spring scheduler to export the results as CSV file to common server path for every 30 minutes (configurable through external properties)</p></li>
+                        </ul> 
+                    <br/>
+            </div>
+            <div class="md:col-span-3 p-8 dark:bg-slate-800/40 bg-yellow-100 rounded-3xl bento-card">
+                <h3 class="text-sm font-bold mb-4">Self Learning Projects</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT: MINIMALIST -->
+    <section id="contact" class="py-32 px-8 bg-slate-50 dark:bg-slate-800/20 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tighter">Ready for the next <span
+                    class="text-blue-600 underline">Breakthrough?</span></h2>
+            <p class="text-slate-500 mb-10 text-lg">Currently evaluating Lead & Architectural opportunities in India and Remote.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:cvignesh.javabackend@gmail.com"
+                    class="px-10 py-5 bg-slate-900 dark:bg-white dark:text-slate-900 text-white rounded-full font-bold text-sm tracking-widest uppercase hover:scale-105 transition">Email
+                    Me</a>
+                <a href="https://www.linkedin.com"
+                    class="px-10 py-5 border-2 border-slate-200 dark:border-slate-700 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-white dark:hover:bg-slate-800 transition">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-slate-100 dark:border-slate-800">
+        <p class="text-[10px] font-bold text-slate-400 tracking-[0.5em] uppercase">© 2025 · Chidambaravignesh J ·
+            Engineered for Excellence</p>
+    </footer>
+
+    <script>
+        function toggleDark() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 
 </body>
+
 </html>
